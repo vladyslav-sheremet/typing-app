@@ -1,0 +1,17 @@
+.heade__desktop {
+    display: flex;
+}
+
+.header__mobile {
+    display: none;
+}
+
+@media (max-width: 992px) {
+    .header__desktop {
+        display: none;
+    }
+    
+    .header__mobile {
+        display: flex;
+    }
+}

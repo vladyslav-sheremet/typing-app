@@ -1,0 +1,197 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+
+  &-dark {
+    background-color: #0A335C;
+  }
+
+  &-light {
+    background-color: #fff;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 15px;
+}
+
+.main__wrapper {
+  width: 100%;
+  height: 85px;
+  background-color: transparent;
+}
+
+input {
+  background-color: transparent;
+    padding: 0 20px 0 20px;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    border: none;
+    margin: 0;
+    outline: 0;
+    top: -10px;
+    overflow: hidden;
+    color: transparent;
+    height: 1px;
+    z-index: 5;
+}
+
+.fields {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 120px;
+  line-height: 136px;
+
+  &-dark {
+    color: #fff;
+  }
+
+  &-light {
+    color: #0A335C;
+  }
+}
+
+.f1, .f2 {
+  display: inline;
+}
+
+.f1 {
+    opacity: 0;
+}
+
+.f-cursor {
+  display: inline-block;
+  margin-top: 48px;
+}
+
+.active {
+  animation-iteration-count: 1;
+  animation-duration: .3s;
+  animation-timing-function: ease-in-out;
+}
+
+.active.open {
+  animation-name: open;
+}
+
+.active.close {
+  animation-name: close;
+}
+
+@keyframes open {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(6deg);
+  }
+}
+
+@keyframes close {
+  0% {
+    transform: rotate(6deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.buttons-wrapper {
+  display: none;
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.alba {
+  animation-iteration-count: infinite;
+  animation-duration: .7s;
+  animation-timing-function: ease-in-out;
+  animation-name: upAndDown;
+}
+
+@keyframes upAndDown {
+  0% {
+    transform: translateY(0)
+  }
+
+  50% {
+    transform: translateY(4px)
+  }
+
+  100% {
+    transform: translateY(0)
+  }
+}
+
+@media (max-width: 992px) {
+  .buttons-wrapper {
+    display: flex;
+  }
+
+  .fields {
+    font-size: 96px;
+    line-height: 112px;
+  }
+
+  .alba {
+    width: 96px;
+  }
+
+  .f-cursor {
+    margin-top: 24px;
+  }
+}
+
+@media (max-width: 400px) {
+  .fields {
+    font-size: 48px;
+    line-height: 59px;
+  }
+
+  .alba {
+    width: 88px;
+  }
+
+  .f-cursor {
+    margin-top: 16px;
+  }
+}

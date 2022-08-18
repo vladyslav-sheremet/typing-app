@@ -1,0 +1,118 @@
+.header__logo-big {
+    display: block;
+}
+
+.header__logo-small {
+    display: none;
+}
+
+.header__mobile {
+    &-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 72px;
+        padding: 0 24px;
+    }
+
+    &-menu {
+        position: absolute;
+        top: -750px;
+        left: 0;
+        bottom: 750px;
+        right: 0;
+        background-color: #00ACFF;
+        z-index: 2;
+        padding: 112px 0 0 44px;
+        transition: .5s all ease;
+
+        &.active {
+            top: 0;
+            bottom: 0;
+        }
+    }
+
+    &-item {
+        color: #fff;
+        font-weight: 500;
+        padding: 16px 0;
+
+        &--big {
+            font-size: 24px;
+            line-height: 32px;
+            border-bottom: 2px solid rgba(255, 255, 255, .2);
+        }
+
+        &--small {
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+
+    &-menu-inner {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: #fff;
+    }
+
+    &-avatar {
+        width: 40px;
+    }
+
+    &-menu-score {
+        display: flex;
+
+        &-text {
+            padding-left: 6px;
+        }
+    }
+
+    &-burger--big {
+        display: block;
+    }
+
+    &-burger--small {
+        display: none;
+    }
+}
+
+@media (max-width: 400px) {
+    .header {
+        height: 80px;
+
+        &__logo-big {
+            display: none;
+        }
+
+        &__logo-small {
+            display: block;
+        }
+
+        &__mobile {
+            &-burger--big {
+                display: none;
+            }
+
+            &-burger--small {
+                display: block;
+            }
+
+            &-wrapper {
+                padding: 0 16px;
+            }
+
+            &-menu {
+                padding: 80px 0 0 16px;
+            }
+        }
+    }
+}

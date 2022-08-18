@@ -1,0 +1,61 @@
+.header {
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__inner {
+        display: flex;
+        gap: 42px;
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+    }
+
+    &__nav {
+        display: flex;
+        gap: 24px;
+
+        &-item {
+            letter-spacing: -0.2px;
+            font-weight: 700;
+            cursor: pointer;
+            padding: 4px 0;
+
+            &-dark {
+                color: rgba(#fff, .64);
+
+                &:focus-within {
+                    color: rgba(#fff, 1);
+                }
+            }
+
+            &-light {
+                color: rgba(#0A335C, .64);
+
+                &:focus-within {
+                    color: rgba(#0A335C, 1);
+                }
+            }
+        }
+    }
+
+    &__actions {
+        display: flex;
+        align-items: center;
+    }
+
+    &__restart-button {
+        margin-right: 32px;
+    }
+
+    &__mode-button {
+        margin-right: 48px;
+    }
+
+    &__avatar {
+        border-radius: 50%;
+    }
+}
